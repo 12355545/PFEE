@@ -1,0 +1,8 @@
+.selected-dates {
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+.date {
+  margin-right: 3px;
+}

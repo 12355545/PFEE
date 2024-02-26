@@ -1,0 +1,22 @@
+.empty-message {
+  width: 100%; /* Makes the paragraph fill the width of its container */
+  height: 100px; /* Set the desired height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+  color: #333; /* Text color */
+  font-size: 18px; /* Font size */
+  font-weight: bold; /* Font weight */
+
+}
+
+
+
+
+
+
+/* styles.css */
+
+
+

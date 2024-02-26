@@ -1,0 +1,10 @@
+<div class=" demo-inline-calendar-card">
+    <mat-form-field class="custom-form-field">
+    <!-- Date picker basic implementation -->
+    <input matInput [matDatepicker]="datepicker" (dateChange)="onDateChange($event)" placeholder="Select date">
+    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+    <mat-datepicker #datepicker></mat-datepicker>
+    </mat-form-field>
+    
+    
+</div>

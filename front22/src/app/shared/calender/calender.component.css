@@ -1,0 +1,9 @@
+:host ::ng-deep .mat-datepicker-content .mat-calendar .mat-calendar-body .mat-calendar-body-cell-content {
+    /* Add your button styles here */
+    /* This is just an example style */
+    background-color: white;
+    color: #2d68cd;
+    border: 0;
+    border-radius: 3px;
+    /* Continue with your CSS rules */
+    }

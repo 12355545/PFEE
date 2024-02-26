@@ -1,0 +1,176 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a  class="brand-link">
+    <img src="assets/img/img.png" alt="Poulina Holding" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Poulina Holding</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img [src]="getImageUrl()"   class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="/profile2" class="d-block">{{userName}}</a>
+      </div>
+    </div>
+
+
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+             <li class="nav-item">
+              <a [routerLink]="'/home'" class="nav-link">
+                <i class="fa-solid fa-house"></i>
+                <p>
+                  Home
+                </p>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a [routerLink]="'/setting'" class="nav-link">
+                <i class="fa-solid fa-gears"></i>
+                <p>
+                  Setting
+                </p>
+              </a>
+            </li>
+
+
+
+
+              <!-- Add icons to the links using the .nav-icon class
+                   with font-awesome or any other icon font library -->
+                   <li class="nav-item" *ngIf="role_name == 'SUPER_ADMIN'">
+                    <a href="user-manage" class="nav-link">
+                      <i class="fa-solid fa-people-roof"></i>
+                      <p>
+                        User manage
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN'">
+
+                    <a [routerLink]="'/todo-list'" class="nav-link" >
+
+                      <span class="right badge badge-danger" *ngIf="this.bool && role_name == 'SUPER_ADMIN' ">New</span>
+                      <span  *ngIf="this.bool1 && role_name == 'Decision maker' ">completed</span>
+                      <i class="fa-solid fa-list"></i>
+                      <p>
+                        Assign tasks
+                      </p>
+                    </a>
+                  </li>
+
+
+
+
+
+
+                  <li class="nav-item">
+                    <a href="sales-dashboard" class="nav-link" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN'">
+                      <i class="fa-solid fa-chart-line"></i>
+                      <p>
+                        Sales Dashboard
+                      </p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="customers-dashboard" class="nav-link" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN' || role_name == 'Customer Service Representative'">
+                      <i class="fa-solid fa-users"></i>
+                      <p>
+                        Customers Dashboard
+                      </p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="products-dashboard" class="nav-link" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN'">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <p>
+                        Products Dashboard
+                      </p>
+                    </a>
+                  </li>
+
+
+
+
+<!--
+        <li class="nav-item">
+          <a class="nav-link active">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+              Dashboard
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN'">
+              <a href="sales-dashboard" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Sales Dashboard</p>
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN' || role_name == 'Customer Service Representative'">
+              <a href="customers-dashboard" class="nav-link ">
+                <i class="far fa-circle nav-icon"></i>
+                <p> Customers Dashboard </p>
+              </a>
+            </li>
+            <li class="nav-item" *ngIf="role_name == 'Decision maker' || role_name == 'SUPER_ADMIN'">
+              <a href="products-dashboard" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p> Products Dashboard</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+-->
+
+        <!--
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-table"></i>
+            <p>
+              Tables
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="pages/tables/simple.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Simple Tables</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/data.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>DataTables</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="pages/tables/jsgrid.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>jsGrid</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+-->
+
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>

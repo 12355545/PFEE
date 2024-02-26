@@ -1,0 +1,83 @@
+<div class="min-h-full flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img class="mx-auto h-12 w-auto" src="assets/img/logo.png" alt="Workflow">
+    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">Create a fresh account</h2>
+  </div>
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <form class="space-y-6" [formGroup]="signupForm" (ngSubmit)="register()">
+        <div>
+          <label for="full_name" class="block text-sm font-medium text-gray-700">Full Name</label>
+          <div class="mt-1">
+            <input id="full_name" formControlName="full_name" type="text" autocomplete="full_name" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div *ngIf="signupForm.get('full_name')?.touched && signupForm.get('full_name')?.hasError('required')">
+            <small class="text-danger">Your full name is required</small>
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+          <div class="mt-1">
+            <input id="email" formControlName="email" type="email" autocomplete="email" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div *ngIf="signupForm.get('email')?.touched && signupForm.get('email')?.hasError('required')">
+            <small class="text-danger">Your email is required</small>
+          </div>
+        </div>
+        <div>
+          <label for="hashed_password" class="block text-sm font-medium text-gray-700">Password</label>
+          <div class="mt-1">
+            <input id="hashed_password" formControlName="hashed_password" type="password" autocomplete="current-password" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div *ngIf="signupForm.get('hashed_password')?.touched && signupForm.get('hashed_password')?.hasError('required')">
+            <small class="text-danger">Your password is required</small>
+          </div>
+        </div>
+        <div>
+          <label for="confirm_password" class="block text-sm font-medium text-gray-700">Confirm password</label>
+          <div class="mt-1">
+            <input id="confirm_password" name="confirm_password" formControlName="confirm_password" type="password" autocomplete="password" required
+              class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+          </div>
+          <div *ngIf="signupForm.get('confirm_password')?.touched && signupForm.get('confirm_password')?.hasError('required')">
+            <small class="text-danger">Please confirm your password</small>
+          </div>
+        </div>
+
+        <div>
+          <label for="Role" class="block text-sm font-medium text-gray-700">Role</label>
+          <div class="mt-1">
+            <select class="form-select" aria-label="Default select example" id="Role" formControlName="role">
+              <option value="" disabled selected>select the role</option>
+              <option value="Customer Service Representative">Customer Service Representative</option>
+              <option value="Decision maker">Decision maker</option>
+            </select>
+          </div>
+          <div *ngIf="signupForm.get('role')?.touched && signupForm.get('role')?.hasError('required')">
+            <small class="text-danger">Please select a role</small>
+          </div>
+        </div>
+        <div>
+          <button type="submit" (click)="register()"
+            class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
+        </div>
+      </form>
+
+
+      <div class="mt-6">
+        <div class="relative">
+          <div class="absolute inset-0 flex items-center">
+            <div class="w-full border-t border-gray-300"></div>
+          </div>
+          <div class="relative flex justify-center text-sm">
+            <a class="px-2 bg-white text-gray-500" [routerLink]="['/']">Or Signin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

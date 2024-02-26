@@ -1,0 +1,24 @@
+
+
+<!-- Button to open overlay -->
+
+<div class="buttons" style="padding-left: 400px; margin-top: -100px">
+  <button (click)="openOverlay()" class="btn">
+    <span></span>
+    <p data-start="good luck!" data-text="start!" data-title="Select Discount"></p>
+  </button>
+</div>
+
+
+<div *ngIf="showOverlay" class="overlay1">
+  <div class="overlay-content1">
+
+    <ng-container>
+
+      <p>Selected Discount : {{ selectedDiscount }}</p>
+    </ng-container>
+
+    <!-- Close button -->
+    <button (click)="closeOverlay()">Close</button>
+  </div>
+</div>

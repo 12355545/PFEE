@@ -1,0 +1,58 @@
+<div class="content-header">
+    <div class="container-fluid">
+    <div class="row mx-2">
+    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+    <div class="buttons m-3"  style="width: 200px; height: 50px;">
+      <select class="form-select" [(ngModel)]="selectedYear" (ngModelChange)="afficheParAnnnee($event)" *ngIf="database=='PFE'">
+        <option value="" disabled>Select Year </option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <!-- Add more options as needed -->
+      </select>
+      <select class="form-select" [(ngModel)]="selectedYear" (ngModelChange)="afficheParAnnnee($event)" *ngIf="database=='PFE_GIPA'">
+        <option value="" disabled>Select Year </option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <!-- Add more options as needed -->
+      </select>
+      <select class="form-select" [(ngModel)]="selectedYear" (ngModelChange)="afficheParAnnnee($event)" *ngIf="database !== 'PFE_GIPA' && database !== 'PFE'">
+        <option value="" disabled>Select Year </option>
+        <option value="2018">2018</option>
+        <option value="2017">2017</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center align-items-center">
+    <div class="m-1" style= "height: 60px;">
+      <mat-form-field style="width: 150%; ">
+        <ngx-multiple-dates [matDatepicker]="picker" placeholder="Excluded Dates" name="excludedDates"
+                            [(ngModel)]="selectedDates" (dateChange)="onDateChange($event)">
+          <div class="selected-dates" *ngFor="let date of selectedDates">
+            <span class="date">{{ date | date: 'shortDate' }}</span>
+            <button mat-icon-button>
+              <mat-icon>clear</mat-icon> <!-- Cross icon -->
+            </button>
+          </div>
+        </ngx-multiple-dates>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    </div>
+    </div>
+
+
+
+
+
+    </div>
+    </div>
+    </div>

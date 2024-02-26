@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <div class="wrapper" style="min-height: 800.5px;" >
+    <app-spinner></app-spinner>
+
+  
+ <app-header-layout></app-header-layout>
+
+  <app-main-admin-page></app-main-admin-page>
+
+
+
+
+
+  <div class="content-wrapper">
+
+
+
+
+
+
+
+  <section class="wrapper" style="margin-top: -16px;">
+    <div class="container-fostrap">
+      <div class="header" style="margin-top: 0.2%;">
+        <h1 style="font-size: 4em; ">Welcome to our platform data insight</h1>
+      </div>
+      <div class="" style="padding-right:  800px;">
+      <mat-form-field style="width: 200px;">
+        <mat-label>Select Database</mat-label>
+        <mat-select [(ngModel)]="selectedDatabase" (ngModelChange)="onDatabaseChange()">
+          <mat-option *ngFor="let key of getDisplayOptions()" [value]="displayToBackendMapping[key]">{{ key }}</mat-option>
+          <mat-option value="custom">Other</mat-option>
+        </mat-select>
+
+      </mat-form-field>
+      <input *ngIf="isCustomOptionSelected" [(ngModel)]="customDatabaseName" class="form-control" style="width: 200px;" (keyup.enter)="getDatabase()" (blur)="hideInput()" placeholder="Enter custom database" />
+</div>
+
+
+
+        <div class="content" style="margin-top:100px;">
+          <div class="container">
+            <div class="row">
+
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="">
+                            <img src="assets/img/sales1.jpg" />
+                        </a>
+                        <div class="card-content">
+                          <h4 class="card-title">
+                              <a href="">Sales Data Analysis</a>
+                          </h4>
+                          <hr style="border-color: white;">
+                          <ul class="card-paragraphe">
+                              <li>&#8226; Dive into our comprehensive sales data for a complete understanding of business performance.</li>
+                              <li>&#8226; Uncover yearly trends, top-performing regions, and the power of data-driven insights.</li>
+
+                              <li>&#8226; 'Read More' offers more in-depth information.</li>
+                          </ul>
+                      </div>
+
+
+                        <div class="card-read-more">
+                            <a href="/sales-dashboard" class="btn btn-link btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="">
+                            <img src="assets/img/clients1.jpg" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="">Customer Understanding</a>
+                            </h4>
+                            <hr style="border-color: white;">
+                            <ul class="card-paragraphe">
+
+                              <li> &#8226;Understanding their preferences and needs allows us to serve them better.</li>
+                              <li>&#8226;We provide in-depth analyses of customer behavior and purchasing patterns.</li>
+                              <li>&#8226;Click 'Read More' to start your journey in understanding your customers better.</li>
+                            </ul>
+                        </div>
+                        <div class="card-read-more">
+                            <a href="/customers-dashboard" class="btn btn-link btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <a class="img-card" href="">
+                            <img src="assets/img/produits1.PNG" />
+                        </a>
+                        <div class="card-content">
+                            <h4 class="card-title">
+                                <a href="">Product Performance Insights</a>
+                            </h4>
+                            <hr style="border-color: white;">
+                            <ul class="card-paragraphe">
+                              <li>&#8226;Understanding your product performance can shed light on what drives your business success.</li>
+                                <li>&#8226;Identify your top sellers and highest profit margin products.</li>
+                                <li>&#8226;Our platform provides detailed insights into your product catalog.</li>
+
+                            </ul>
+                        </div>
+                        <div class="card-read-more">
+                            <a href="/products-dashboard" class="btn btn-link btn-block">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+  </section>
+  </div>
+
+  <aside class="control-sidebar control-sidebar-dark">
+
+  </aside>
+  <app-footer-layout></app-footer-layout>
+  </div>
+</body>
+</html>
+
+
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

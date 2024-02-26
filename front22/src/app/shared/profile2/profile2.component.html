@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ 
+  <app-header-layout></app-header-layout>
+  <app-admin-layout></app-admin-layout>
+  <section class="vh-100" style="background-color: #f4f5f7;margin-top:-114px" >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col col-lg-6 mb-4 mb-lg-0">
+          <div class="card mb-3" style="border-radius: .5rem;">
+            <div class="row g-0">
+              <div class="col-md-4 gradient-custom text-center text-white"
+              style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+             <img [src]="getImageUrl()" alt="Avatar" class="img-fluid my-5 rounded-image" style="width: 80px;" />
+             <h5>{{user.full_name}}</h5>
+             <p>{{user.role_name}}</p>
+         </div>
+
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h6>Information</h6>
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+
+                    <div class="col-6 mb-3">
+                      <h6>Full Name</h6>
+                     <input type="text"   name="full_name" [(ngModel)]="user.full_name">
+                    </div>
+                    <div class="col-6 mb-3">
+                      <h6>Email</h6>
+                      <input type="email"  name="email" [(ngModel)]="user.email" style="width: 100%;">
+                    </div>
+                  </div>
+
+                  <hr class="mt-0 mb-4">
+                  <div class="row pt-1">
+                    <div class="col-6 mb-3">
+                      <h6>Role</h6>
+                      <p class="text-muted">{{user.role_name}}</p>
+                    </div>
+
+                  </div>
+                  <hr class="mt-0 mb-4">
+                  <div class="d-flex justify-content-center mb-2">
+                    <button type="button" class="btn btn-primary" (click)="upload()">update<i class="fa-solid fa-pen-to-square"></i> </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <app-footer-layout></app-footer-layout>
+</body>
+
+</html>

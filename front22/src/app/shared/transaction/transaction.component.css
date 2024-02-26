@@ -1,0 +1,469 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -150px;
+    }
+
+
+
+    .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+    }
+    .form-check.mat-radio-button .mat-radio-outer-circle {
+    border-color: blue !important;
+    }
+
+    .card-body p-0{
+    padding-top:0,75rem;
+    padding-left:1,25rem;
+    padding-bottom:0,75rem;
+    padding-right:1,25rem ;
+    }
+    .overlay-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 5px;
+    width: 40%; /* Adjust this value to control the width of your form card */
+    max-width: 500px; /* You can also set a maximum width */
+    height: 30%; /* Adjust this value to control the height of your form card */
+    max-height: 500px; /* You can also set a maximum height */
+    }
+
+    form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    }
+
+    form .form-group {
+    flex: 1; /* This will make your form inputs take up the remaining space */
+    }
+
+    form button {
+    margin-top: 10px; /* This will add space between your buttons and the form inputs */
+    }
+
+    body {
+      background: #ebedf2;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .empty-state {
+      width: 750px;
+      margin: 40px auto;
+      background: #ffffff;
+      box-shadow: 1px 2px 10px #e1e3ec;
+      border-radius: 4px;
+
+      &__content {
+        padding: 48px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .empty-state__icon {
+          width: 200px;
+          height: 200px;
+          display: flex;
+          align-items: center;
+          border-radius: 200px;
+          justify-content: center;
+          background-color: #f7fafc;
+          box-shadow: 0px 2px 1px #e1e3ec;
+
+          img {
+            width: 170px;
+          }
+        }
+
+        .empty-state__message {
+          color: #38a169;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-top: 0.85rem;
+        }
+
+        .empty-state__help {
+          color: #a2a5b9;
+          font-size: 0.875rem;
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/* transaction.component.css */
+
+ /*bg*/
+/*txt*/
+/*success*/
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  top: 20px;
+  left: 20px;
+}
+
+.buttons button {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  margin: 20px;
+  color: #568fa6;
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.buttons button:before, .buttons button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #44d8a4;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button:after {
+  left: 0;
+  bottom: 0;
+}
+
+.buttons button span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.buttons button span:before, .buttons button span:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: #44d8a4;
+  transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:before {
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+}
+
+.buttons button span:after {
+  left: 0;
+  bottom: 0;
+}
+
+.buttons button p {
+  padding: 0;
+  margin: 0;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.buttons button p:before, .buttons button p:after {
+  position: absolute;
+  width: 100%;
+  transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+  z-index: 1;
+  left: 0;
+}
+
+.buttons button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: #1713ec;
+}
+
+.buttons button:hover:before, .buttons button:hover:after {
+  width: 100%;
+}
+
+.buttons button:hover span {
+  z-index: 1;
+}
+
+.buttons button:hover span:before, .buttons button:hover span:after {
+  height: 100%;
+}
+
+.buttons button:hover p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button:hover p:after {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttons button.start {
+  background-color: #131c6c;
+  box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.buttons button.start p:before {
+  top: -50%;
+  transform: rotate(5deg);
+}
+
+.buttons button.start p:after {
+  color: white;
+  transition: all 0s ease;
+  content: attr(data-start);
+  top: 50%;
+  transform: translateY(-50%);
+  animation: start 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes start {
+  from {
+    top: -50%;
+  }
+}
+
+.buttons button.start:hover:before, .buttons button.start:hover:after {
+  display: none;
+}
+
+.buttons button.start:hover span {
+  display: none;
+}
+
+.buttons button:active {
+  outline: none;
+  border: none;
+}
+
+.buttons button:focus {
+  outline: 0;
+}
+
+
+
+/* Style for the overlay container */
+.overlay1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Style for the content within the overlay */
+.overlay-content1 {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 500px;
+  height: auto; /* Adjust the height as needed */
+  max-height: 500px; /* Adjust the maximum height as needed */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the heading within the overlay */
+.overlay-content1 h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Style for the input field within the overlay */
+.overlay-content1 input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style for the buttons within the overlay */
+.overlay-content1 button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #2d68cd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overlay-content1 button:hover {
+  background-color: #1c4b96;
+}
+
+
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+
+.content {
+    padding:0;
+    margin:10% 15%;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
+
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+}
+
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.alert .alert-link {
+    font-weight: bold;
+}
+
+.alert>p,.alert>ul {
+    margin-bottom: 0;
+}
+
+.alert>p+p {
+    margin-top: 5px;
+}
+
+.alert-dismissable {
+    padding-right: 35px;
+}
+
+.alert-dismissable .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alert-success hr {
+    border-top-color: #c9e2b3;
+}
+
+.alert-success .alert-link {
+    color: #2b542c;
+}
+
+.alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.alert-info hr {
+    border-top-color: #a6e1ec;
+}
+
+.alert-info .alert-link {
+    color: #245269;
+}
+
+.alert-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.alert-warning hr {
+    border-top-color: #f7e1b5;
+}
+
+.alert-warning .alert-link {
+    color: #66512c;
+}
+
+
+
+
+

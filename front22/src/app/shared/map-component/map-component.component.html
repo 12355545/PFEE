@@ -1,0 +1,6 @@
+<button (click)="toggleView()">
+    Switch to {{ isMapView ? 'Bar' : 'Map' }} View
+  </button>
+
+  <div  echarts *ngIf="isMapView" [options]="mapoption" [initOpts]="{renderer: 'svg'}" style="height:500px;"></div>
+  <div echarts *ngIf="!isMapView" [options]="barOption" [initOpts]="{renderer: 'svg'}" style="height:500px;"></div>

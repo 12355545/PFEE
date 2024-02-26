@@ -1,0 +1,46 @@
+
+<div class="container" >
+
+
+
+    <div class="row">
+
+
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-10">
+            <div id="ui">
+                <form >
+
+                <br>
+
+                <label for="fname">Titre</label>
+                <input type="text" name="title" class="form-control" [(ngModel)]="todo.title">
+                <br>
+
+                <label for="fname">Description</label>
+                <input type="text" name="content" class="form-control" [(ngModel)]="todo.description">
+
+                <label for="date">Description</label>
+                <input type="date" name="date" class="form-control" [(ngModel)]="todo.time">
+
+                <input type="text" name="id" [(ngModel)]="todo.id" hidden>
+
+              <br>
+              <br>
+              <input  (click)="processForm()" value="save" class="btn" >
+
+            </form>
+            </div>
+
+
+
+    </div>
+
+    <div class="col-lg-1"></div>
+
+    </div>
+
+
+
+  </div>

@@ -1,0 +1,13 @@
+<mat-form-field style="width: 70%;">
+  <ngx-multiple-dates [matDatepicker]="picker" placeholder="Excluded Dates" name="excludedDates"
+                      [(ngModel)]="selectedDates" (dateChange)="onDateChange($event)">
+    <div class="selected-dates" *ngFor="let date of selectedDates">
+      <span class="date">{{ date | date: 'shortDate' }}</span>
+      <button mat-icon-button>
+        <mat-icon>clear</mat-icon> <!-- Cross icon -->
+      </button>
+    </div>
+  </ngx-multiple-dates>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

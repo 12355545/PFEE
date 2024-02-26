@@ -1,0 +1,33 @@
+<!-- Button to open overlay -->
+<div class="buttons" style="padding-left: 400px; margin-top: -100px">
+  <button (click)="openOverlay()" class="btn">
+    <span></span>
+    <p data-start="good luck!" data-text="start!" data-title="Select Discount"></p>
+  </button>
+</div>
+
+<!-- Overlay container -->
+ <!-- transaction.component.html -->
+
+ <!-- Overlay container -->
+<div *ngIf="showOverlay" class="overlay1">
+  <div class="overlay-content1">
+    <h2>Select Discount</h2>
+
+    <!-- Render input field and Apply button only for Decision Maker -->
+    <ng-container >
+      <input type="number" [(ngModel)]="selectedDiscount" placeholder="Enter discount percentage">
+
+      <button (click)="applyDiscount()">Apply</button>
+    </ng-container>
+
+
+
+    <!-- Close button -->
+    <button (click)="closeOverlay()">Close</button>
+  </div>
+</div>
+
+
+
+

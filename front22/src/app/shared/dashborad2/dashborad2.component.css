@@ -1,0 +1,157 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .overlay-content {
+    padding: 40px;  /* Increased padding */
+    border: 2px solid #333;  /* Add a border */
+    background-color: #ffffff;
+
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;  /* you can adjust this based on your preference */
+    max-width: 600px; /* you can adjust this based on your preference */
+  }
+
+  .generate-reports-button {
+    width: 150px; /* This is the width defined in your .buttons button class */
+    height: 60px; /* This is the height defined in your .buttons button class */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+button {
+  padding: 7px 17px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* This will style the Submit button */
+
+/* This will change the style of the Submit button on hover */
+.btn-secondary:hover {
+  background-color: #2c2c2c; /* Slightly lighter than #333 */
+  color: #fff;
+}
+
+
+:root {
+  --blue: #0255f0;
+  --lt-gray: #cccccc;
+  --dk-gray: #767676;
+}
+fieldset {
+  border: none;
+}
+fieldset > label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  vertical-align: top;
+  font-size: 1rem;
+  line-height: 28px;
+}
+fieldset > label::after {
+  content: ":";
+}
+select,
+details {
+  display: inline-block;
+  width: 250px;
+  background-color: white;
+  cursor: pointer;
+}
+select,
+summary {
+  border: 1px solid var(--lt-gray);
+  border-collapse: collapse;
+  border-radius: 4px;
+  padding: 4px;
+  width: 250px;
+  background-color: white;
+  cursor: pointer;
+}
+details[open] > summary::marker {
+  color: var(--blue);
+}
+select:focus,
+summary:focus,
+summary:active {
+  box-shadow: 0 0 5px 1px var(--blue);
+}
+
+ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 2px;
+  border: 1px solid var(--dk-gray);
+  box-shadow: 0 0 5px 1px var(--lt-gray);
+}
+li {
+  margin: 0px;
+  padding: 0px;
+}
+li > label {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+}
+li > label:hover,
+li > label:has(input:checked) {
+  background-color: var(--dk-gray);
+  color: white;
+}
+
+
+
+
+.horizontal-years {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.year-label {
+  flex-basis: 48%; /* Adjust the width as needed, leaving space for margins */
+  margin-bottom: 10px; /* Adjust the margin between items as needed */
+}
+
+
+/* Add additional CSS styling as needed */
+
+
+
+
+
+/* Define a base point class */

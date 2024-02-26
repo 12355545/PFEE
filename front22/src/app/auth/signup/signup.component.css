@@ -1,0 +1,22 @@
+.bg-green-500 {
+    background-color: #28a745; /* Couleur verte */
+  }
+  
+  .bg-blue-500 {
+    background-color: #007bff; /* Couleur bleue */
+  }
+  
+  .bg-red-500 {
+    background-color: #dc3545; /* Couleur rouge */
+  }
+  
+
+  .progress {
+    height: 2px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  

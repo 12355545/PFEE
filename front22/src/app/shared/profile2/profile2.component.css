@@ -1,0 +1,33 @@
+.gradient-custom {
+  /* fallback for old browsers */
+  background: blue;
+   
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right bottom,rgba(0, 128, 255, 1), rgba(0, 128, 255, 1)); /* This is a standard blue color */
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right bottom, rgba(0, 128, 255, 1), rgba(0, 128, 255, 1)); /* This is a standard blue color */
+}
+.rounded-image {
+  border-radius: 50%; /* This makes the image fully rounded, like a circle */
+}
+
+
+  /* styles.css */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.app-footer {
+  margin-top: auto;
+}
+
+
+.card {
+  width: 140%; /* Adjust as needed */
+  margin: 0 auto; /* To center the card if it's within a flex container */
+}
